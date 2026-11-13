@@ -1,0 +1,140 @@
+{
+  "manifest_version": 3,
+  "name": "Sakugo Studio",
+  "short_name": "Sakugo Studio",
+  "version": "0.2.0",
+  "description": "Anime theme for qoj.ac, cses.fi and oj.uz: glass pages over anime scenes, PDF statements as real text, cutscenes, custom sounds. Not affiliated with any of them.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Sakugo Studio",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/studio/studio.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://qoj.ac/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "src/content/theme.css",
+        "src/content/styles.css",
+        "src/content/moments.css"
+      ],
+      "js": [
+        "src/shared/core.js",
+        "src/shared/solve.js",
+        "src/shared/scenes.js",
+        "src/content/theme.js",
+        "src/content/statement.js",
+        "src/content/pages.js",
+        "src/content/fx.js",
+        "src/content/moments.js",
+        "src/content/watch.js",
+        "src/content/boot.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://cses.fi/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "src/content/theme.css",
+        "src/content/styles.css",
+        "src/content/moments.css",
+        "src/content/sites.css"
+      ],
+      "js": [
+        "src/shared/core.js",
+        "src/shared/solve.js",
+        "src/shared/scenes.js",
+        "src/content/theme.js",
+        "src/content/statement.js",
+        "src/content/fx.js",
+        "src/content/moments.js",
+        "src/content/sites.js",
+        "src/content/cses.js",
+        "src/content/boot.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://oj.uz/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "src/content/theme.css",
+        "src/content/styles.css",
+        "src/content/moments.css",
+        "src/content/sites.css"
+      ],
+      "js": [
+        "src/shared/core.js",
+        "src/shared/solve.js",
+        "src/shared/scenes.js",
+        "src/content/theme.js",
+        "src/content/statement.js",
+        "src/content/fx.js",
+        "src/content/moments.js",
+        "src/content/sites.js",
+        "src/content/ojuz.js",
+        "src/content/boot.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scenes/*",
+        "fonts/*"
+      ],
+      "matches": [
+        "https://qoj.ac/*",
+        "https://cses.fi/*",
+        "https://oj.uz/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sakugo-studio@extensions.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "host_permissions": [
+    "https://static.oj.uz/*"
+  ]
+}

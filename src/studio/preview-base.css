@@ -1,0 +1,23 @@
+/* The little of Bootstrap the preview's made-up page relies on. On qoj.ac the real one is already there. */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 14px; }
+body { margin: 0; }
+h1, h2, h3, h4 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 500; line-height: 1.2; }
+p { margin-top: 0; margin-bottom: 1rem; }
+ul { margin-top: 0; margin-bottom: 1rem; }
+a { text-decoration: none; }
+.container { margin: 0 auto; }
+.nav { display: flex; flex-wrap: wrap; padding-left: 0; margin-bottom: 0; list-style: none; }
+.nav-link { display: block; padding: 0.5rem 1rem; }
+.navbar { display: flex; position: relative; }
+.navbar-collapse { display: flex; flex-grow: 1; align-items: center; }
+.navbar-nav { display: flex; padding-left: 0; margin-bottom: 0; list-style: none; }
+.mr-auto { margin-right: auto; }
+.float-right { float: right; }
+.form-control { display: block; width: 100%; padding: 0.375rem 0.75rem; font: inherit; }
+.input-group { display: flex; }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+.alert { padding: 0.75rem 1.25rem; }
+pre { margin: 0; overflow: auto; }
+button { font: inherit; }

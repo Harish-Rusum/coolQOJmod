@@ -1,0 +1,92 @@
+/* sites.css: what CSES and oj.uz need before theme.css can dress them. QOJ brings Bootstrap 4 and its own layout,
+   which these rules stand in for. The look itself still comes from theme.css and styles.css. */
+
+/* nothing shows until the page has been rebuilt */
+[data-qs="on"]:not([data-qs-built]) body { visibility: hidden; }
+
+/* the site's own frame, once its contents have moved out */
+[data-qs-built][data-qs="on"] .skeleton, [data-qs-built][data-qs="on"] body > .header, [data-qs-built][data-qs="on"] #container { display: none !important; }
+/* theme.css hides a heading in this spot on QOJ, where it is the site's title */
+[data-qs="on"] body > .qs-page > div:first-child > h1 { display: block !important; }
+.qs-ep-tertiary { flex-wrap: wrap; }
+
+[data-qs="on"] body { margin: 0; }
+.qs-page, .qs-page *, .navbar, .navbar * { box-sizing: border-box; }
+[data-qs="on"] body > .container.qs-page { display: flex; flex-direction: column; margin: 0 auto; }
+.qs-page > .uoj-footer { order: 9; }
+[data-qs-built][data-qs="on"] .back-to-top, [data-qs-built][data-qs="on"] #loader { display: none !important; }
+
+/* top bar */
+[data-qs="on"] body > .navbar { display: flex; justify-content: flex-start; border-width: 0 0 2px; border-radius: 0; }
+[data-qs="on"] .navbar-brand { float: none; height: auto; }
+[data-qs="on"] .navbar-nav { display: flex; float: none; margin: 0; padding: 0; list-style: none; }
+[data-qs="on"] .qs-user { display: flex; margin-left: auto !important; padding: 0; list-style: none; }
+[data-qs="on"] .qs-user .nav-item { display: flex; }
+[data-qs="on"] .navbar-nav .nav-link:hover, [data-qs="on"] .qs-user .nav-link:hover { background: none; }
+
+/* a submit link looks the same as QOJ's submit button */
+[data-qs="on"] a.qs-submit { color: var(--qs-accent-ink); text-decoration: none; }
+[data-qs="on"] a.qs-submit:hover { color: var(--qs-desk); text-decoration: none; }
+
+/* tabs */
+[data-qs="on"] .qs-subnav .nav-tabs { margin: 0 !important; padding: 0; list-style: none; }
+[data-qs="on"] .qs-subnav .nav-tabs > li { float: none; margin: 0; }
+[data-qs="on"] .qs-subnav .nav-tabs .nav-link { display: block; text-decoration: none; text-transform: none; font-size: 14.5px; }
+[data-qs="on"] .qs-subnav .nav-tabs > li { border: 0; display: block; }
+[data-qs="on"] .qs-page a { text-decoration: none; }
+[data-qs="on"] .qs-page a:hover { text-decoration: underline; }
+[data-qs="on"] body > .navbar a { text-decoration: none; }
+
+/* side cards */
+.qs-card-list { display: flex; flex-direction: column; font-size: 13.5px; }
+.qs-card-list > a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 3px 6px; border-radius: 3px; color: var(--qs-text) !important; text-decoration: none !important; }
+.qs-card-list > a:hover { color: var(--qs-accent) !important; background: var(--qs-fill); }
+.qs-card-list > a.current { color: var(--qs-accent-ink) !important; background: var(--qs-accent); }
+.qs-card-scroll .qs-card-list { max-height: 46vh; overflow-y: auto; scrollbar-width: thin; }
+
+/* tables and forms without Bootstrap */
+[data-qs="on"] .qs-page table.table { width: 100%; border-collapse: collapse; }
+[data-qs="on"] .qs-page table.table tr { background: transparent; }
+[data-qs="on"] .qs-page table.table tr:nth-child(n) { background: transparent; }
+[data-qs="on"] .qs-page table.table th, [data-qs="on"] .qs-page table.table td { padding: 7px 10px; border-top: 1px solid var(--qs-line); text-align: left; background: transparent; color: var(--qs-text); }
+[data-qs="on"] .qs-page input[type="submit"], [data-qs="on"] .qs-page button[type="submit"] { padding: 7px 22px; color: var(--qs-accent-ink); background: var(--qs-accent); border: 0; border-radius: 4px; font: 700 14.5px var(--qs-body); cursor: pointer; }
+[data-qs="on"] .qs-page select, [data-qs="on"] .qs-page input[type="file"] { padding: 4px 6px; color: var(--qs-text); background: rgb(var(--qs-scrim) / 0.55); border: 1px solid var(--qs-line-strong); border-radius: 4px; }
+[data-qs="on"] .qs-page label, [data-qs="on"] .qs-page p { color: var(--qs-text); }
+[data-qs="on"] .qs-statement-text ul { padding-left: 1.4em; }
+[data-qs="on"] .qs-statement-text > ul > li::marker { color: var(--qs-accent); }
+[data-qs="on"] .qs-statement-text .katex { color: inherit; font-size: 1.04em; }
+
+/* ------------------------------------------------------------------------------------------ CSES */
+
+[data-qs="on"] .qs-page .task-list { max-width: none; margin: 0 0 22px; padding: 0; list-style: none; border-top: 1px solid var(--qs-line); }
+[data-qs="on"] .qs-page .task-list > li { align-items: center; gap: 10px; padding: 6px 10px; border-bottom: 1px solid var(--qs-line); background: transparent; }
+[data-qs="on"] .qs-page .task-list > li:hover { background: var(--qs-fill); }
+[data-qs="on"] .qs-page .task-list > li::before { display: none; }
+[data-qs="on"] .qs-page .task-list a { min-width: 0; color: var(--qs-text); font-weight: 600; }
+[data-qs="on"] .qs-page .task-list a:hover { color: var(--qs-accent); }
+[data-qs="on"] .qs-page .task-list .detail { color: var(--qs-text3); opacity: 1; font-size: 13px; font-variant-numeric: tabular-nums; }
+/* solved marks and verdicts: CSES paints them in light solid colours meant for a white page */
+[data-qs="on"] .qs-page .task-score, [data-qs="on"] .qs-card-list .task-score { color: var(--qs-text3); background: transparent; border: 0; padding: 0 6px; }
+[data-qs="on"] .qs-page .task-list .task-score { width: 2.2em; flex: none; }
+[data-qs="on"] .qs-page .task-score.full { color: var(--qs-ok); background: rgb(var(--qs-ok-rgb) / 0.14); }
+[data-qs="on"] .qs-page .task-score.zero, [data-qs="on"] .qs-page .task-score.compile-err, [data-qs="on"] .qs-page .task-score.system-err { color: var(--qs-bad); background: rgb(var(--qs-bad-rgb) / 0.14); }
+[data-qs="on"] .qs-page .task-score.partial { color: var(--qs-warn); background: rgb(var(--qs-warn-rgb) / 0.14); }
+[data-qs="on"] .qs-page .task-score.pending { color: var(--qs-info); background: rgb(var(--qs-info-rgb) / 0.14); }
+
+/* ----------------------------------------------------------------------------------------- oj.uz */
+
+[data-qs="on"] .uoj-footer .row { display: flex; justify-content: space-between; margin: 0; }
+[data-qs="on"] .uoj-footer .footer-nav { display: flex; gap: 14px; margin: 0; padding: 0; list-style: none; }
+[data-qs="on"] .qs-page .panel { margin-bottom: 14px; background: var(--qs-fill); border: 1px solid var(--qs-line); border-radius: 6px; box-shadow: none; }
+[data-qs="on"] .qs-page .panel-heading { color: var(--qs-text); background: var(--qs-fill); border-color: var(--qs-line); }
+[data-qs="on"] .qs-page .label { color: var(--qs-text); background: var(--qs-fill-2); }
+[data-qs="on"] .qs-page .pagination > li > a, [data-qs="on"] .qs-page .pagination > li > span { color: var(--qs-text2); background: var(--qs-fill); border-color: var(--qs-line); }
+[data-qs="on"] .qs-page .pagination > .active > a, [data-qs="on"] .qs-page .pagination > .active > span { color: var(--qs-accent-ink); background: var(--qs-accent); border-color: var(--qs-accent); }
+[data-qs="on"] .qs-page .progressbar { position: relative; background: var(--qs-fill-2); }
+[data-qs="on"] .qs-page .progressbar .bar { background: rgb(var(--qs-ok-rgb) / 0.5); }
+[data-qs="on"] .qs-page .progressbar .text { color: var(--qs-text); text-shadow: none; }
+[data-qs="on"] .qs-page .service-boxed, [data-qs="on"] .qs-page .service-box { background: transparent; color: var(--qs-text); }
+[data-qs="on"] .qs-page .service-content p, [data-qs="on"] .qs-page .service-content h4 { color: var(--qs-text); }
+[data-qs="on"] .qs-page .service-icon { color: var(--qs-accent); }
+[data-qs="on"] iframe.problem-pdf-web-viewer { width: 100%; height: 80vh; border: 0; border-radius: 6px; background: #fff; }
+[data-qs="on"] .qs-page .ace_editor { border: 1px solid var(--qs-line-strong); border-radius: 6px; }

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sakugo Studio</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../../icons/icon48.png" alt="" width="30" height="30">
+    <h1>Sakugo Studio</h1>
+    <label class="switch" title="Theme on or off"><input id="on" type="checkbox"><span class="track"></span></label>
+  </header>
+  <div id="styles" class="styles" role="radiogroup" aria-label="Style"></div>
+  <div id="scenes" class="scenes" role="radiogroup" aria-label="Scene for every page"></div>
+  <section class="opts">
+    <label class="switch"><input id="title" type="checkbox"><span class="track"></span><span>Title cards</span></label>
+    <label class="switch"><input id="broadcast" type="checkbox"><span class="track"></span><span>Judging broadcast</span></label>
+    <label class="switch"><input id="sound" type="checkbox"><span class="track"></span><span>Sound</span></label>
+    <label class="switch"><input id="motion" type="checkbox"><span class="track"></span><span>Particles</span></label>
+    <label class="switch"><input id="pdf" type="checkbox"><span class="track"></span><span>PDFs as text</span></label>
+  </section>
+  <button id="studio" class="studio" type="button">Open the Studio</button>
+  <p class="foot">Not affiliated with QOJ, CSES or oj.uz.</p>
+  <script src="../shared/core.js"></script>
+  <script src="../shared/scenes.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

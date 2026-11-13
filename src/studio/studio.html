@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sakugo Studio</title>
+  <link rel="stylesheet" href="studio.css">
+  <link rel="icon" href="../../icons/icon32.png">
+</head>
+<body>
+  <header class="top">
+    <span class="mark" aria-hidden="true">作画</span>
+    <div class="top-text">
+      <h1>Sakugo Studio</h1>
+      <p>Any picture becomes your theme on QOJ, CSES and oj.uz. Handles and statements stay readable at every setting.</p>
+    </div>
+    <label class="switch top-switch"><input id="on" type="checkbox"><span class="track"></span><span id="onLabel">On</span></label>
+  </header>
+
+  <main class="layout">
+    <div class="controls" id="controls"></div>
+    <section class="stage" aria-label="Preview">
+      <div class="frame-box"><iframe id="frame" src="preview.html" title="Theme preview" tabindex="-1"></iframe></div>
+      <div class="plays" id="plays"></div>
+      <p class="caption">A made-up problem running the real page code. Nothing here touches the real sites.</p>
+    </section>
+  </main>
+
+  <script src="../shared/core.js"></script>
+  <script src="../shared/solve.js"></script>
+  <script src="../shared/scenes.js"></script>
+  <script src="studio.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "sakura-valley",
+    "name": "Sakura Valley",
+    "ambient": "petals",
+    "blurb": "a moonlit ridge above misty temples",
+    "file": "sharp/sakura-valley.png",
+    "source": "an AI image generator",
+    "accent": "#f7a3d6",
+    "accent2": "#c9b4ff",
+    "orig": "1"
+  },
+  {
+    "id": "blossom-road",
+    "name": "Blossom Road",
+    "ambient": "petals",
+    "blurb": "a cobbled road under full cherry trees",
+    "file": "sharp/blossom-road.png",
+    "source": "Google Gemini",
+    "accent": "#ff8fb4",
+    "accent2": "#ffd9a8",
+    "orig": "10"
+  },
+  {
+    "id": "jade-dragon",
+    "name": "Jade Dragon",
+    "ambient": "motes",
+    "blurb": "a dragon in the clouds above the falls",
+    "file": "sharp/jade-dragon.png",
+    "source": "an AI image generator",
+    "accent": "#4fe0b8",
+    "accent2": "#f2e6b0",
+    "orig": "2"
+  },
+  {
+    "id": "bamboo-moon",
+    "name": "Bamboo Moon",
+    "ambient": "fireflies",
+    "blurb": "a pale moon over the grove",
+    "file": "sharp/bamboo-moon.png",
+    "source": "Google Gemini",
+    "accent": "#6fe3cf",
+    "accent2": "#d9f2e6",
+    "orig": "11"
+  },
+  {
+    "id": "maple-gate",
+    "name": "Maple Gate",
+    "ambient": "leaves",
+    "blurb": "stone steps under an autumn gate",
+    "file": "sharp/maple-gate.png",
+    "source": "Google Gemini",
+    "accent": "#ff8a5c",
+    "accent2": "#ffcf9e",
+    "orig": "12"
+  },
+  {
+    "id": "coast-road",
+    "name": "Coast Road",
+    "ambient": "motes",
+    "blurb": "a bicycle, a lighthouse, nothing to do",
+    "file": "sharp/coast-road.png",
+    "source": "Google Gemini",
+    "accent": "#5cb8ea",
+    "accent2": "#ffd97a",
+    "orig": "4"
+  },
+  {
+    "id": "lantern-street",
+    "name": "Lantern Street",
+    "ambient": "embers",
+    "blurb": "festival lights and distant fireworks",
+    "file": "sharp/lantern-street.png",
+    "source": "Google Gemini",
+    "accent": "#ffb35c",
+    "accent2": "#e88fb8",
+    "orig": "7"
+  },
+  {
+    "id": "rain-rooftop",
+    "name": "Rain Rooftop",
+    "ambient": "rain",
+    "blurb": "a wet city at twilight",
+    "file": "sharp/rain-rooftop.png",
+    "source": "Google Gemini",
+    "accent": "#c6a6ff",
+    "accent2": "#ff9fd2",
+    "orig": "3"
+  },
+  {
+    "id": "meteor-hill",
+    "name": "Meteor Hill",
+    "ambient": "fireflies",
+    "blurb": "two people, one hill, a sky of meteors",
+    "file": "sharp/meteor-hill.png",
+    "source": "Google Gemini",
+    "accent": "#6fe6d8",
+    "accent2": "#a9c6ff",
+    "orig": "6"
+  },
+  {
+    "id": "ash-peaks",
+    "name": "Ash Peaks",
+    "ambient": "motes",
+    "blurb": "a small gate among grey mountains",
+    "file": "sharp/ash-peaks.png",
+    "source": "Google Gemini",
+    "accent": "#c6b4e6",
+    "accent2": "#ffb0c4",
+    "orig": "8"
+  },
+  {
+    "id": "ember-sun",
+    "name": "Ember Sun",
+    "ambient": "embers",
+    "blurb": "a lone figure before a huge low sun",
+    "file": "sharp/ember-sun.png",
+    "source": "Google Gemini",
+    "accent": "#ff8a65",
+    "accent2": "#ffd08a",
+    "orig": "9"
+  },
+  {
+    "id": "iron-dusk",
+    "name": "Iron Dusk",
+    "ambient": "motes",
+    "blurb": "a giant machine in the overgrown city",
+    "file": "sharp/iron-dusk.png",
+    "source": "Google Gemini",
+    "accent": "#ff9eb0",
+    "accent2": "#8fb8d8",
+    "orig": "5"
+  },
+  {
+    "id": "moon-vigil",
+    "name": "Moon Vigil",
+    "ambient": "petals",
+    "blurb": "a swordsman under an enormous moon",
+    "file": "sharp/moon-vigil.png",
+    "source": "Animagine XL through the AI Horde",
+    "accent": "#d4a8ff",
+    "accent2": "#9cc2ff",
+    "orig": "moon-vigil-a"
+  },
+  {
+    "id": "shrine-steps",
+    "name": "Shrine Steps",
+    "ambient": "leaves",
+    "blurb": "a long climb through burning autumn",
+    "file": "sharp/shrine-steps.png",
+    "source": "Animagine XL through the AI Horde",
+    "accent": "#ff7a45",
+    "accent2": "#ffc36b",
+    "orig": "shrine-steps-a"
+  }
+]
